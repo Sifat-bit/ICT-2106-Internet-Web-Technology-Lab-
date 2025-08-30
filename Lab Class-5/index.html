@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Class 5</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <style>
+    
+    body {
+        background-color: #e6f2ff; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+
+    header h1 {
+        color: #0056b3; 
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    header p.lead {
+        color: #3b3b3b;
+        font-size: 1.1rem;
+    }
+
+    .row > .col-md {
+        padding: 25px;
+        border-radius: 12px;
+        background: linear-gradient(145deg, #cce6ff, #99ccff);
+        transition: transform 0.3s, box-shadow 0.3s;
+        color: #003366;
+    }
+
+    .row > .col-md:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+
+    blockquote {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #6a4c93;
+        border-left: 5px solid #ff9933;
+        padding-left: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+    }
+
+  
+    .figure-caption {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 5px;
+    }
+
+   
+    .gallery img,
+    .figure-img {
+        border-radius: 12px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .gallery img:hover,
+    .figure-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5 p-4">
+   
+    <header class="text-center mb-5">
+      <h1 class="display-3">LAB CLASS-5</h1>
+      <p class="lead">Bootstrap Layout Example with Columns, Images, and Blockquotes</p>
+    </header>
+
+    <section class="row mb-5 g-4">
+      <div class="col-md p-4 rounded shadow-sm">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quasi voluptate dolor ab. Consequuntur blanditiis voluptates quibusdam perferendis minus dicta error veniam, fuga voluptatum illo cupiditate in et sequi eos!</p>
+      </div>
+      <div class="col-md p-4 rounded shadow-sm">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem cumque fuga omnis? Neque dolorem ipsa laborum repellendus assumenda, suscipit inventore error eos possimus id qui voluptas. Est ut repellat explicabo.</p>
+      </div>
+      <div class="col-md p-4 rounded shadow-sm">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, inventore soluta! Libero quasi praesentium omnis quaerat ab eligendi, vero consequatur.</p>
+      </div>
+    </section>
+
+    <hr class="border-secondary mb-5">
+
+    <section class="mb-5">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p class="fs-5">"A well-known quote, contained in a blockquote element."</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+      </figure>
+    </section>
+
+   
+    <section class="text-center mb-5">
+      <figure class="figure d-inline-block mx-2">
+        <img src="images/rainyday.jpg" class="figure-img img-fluid rounded shadow-sm" alt="Rainy Day" style="max-width: 300px;">
+        <figcaption class="figure-caption text-center">A Rainy Day</figcaption>
+      </figure>
+      <figure class="figure d-inline-block mx-2">
+        <img src="images/hill.jpg" class="figure-img img-fluid rounded shadow-sm" alt="Hill View" style="max-width: 300px;">
+        <figcaption class="figure-caption text-center">Hill View</figcaption>
+      </figure>
+      <figure class="figure d-inline-block mx-2">
+        <img src="images/sea.jpg" class="figure-img img-fluid rounded shadow-sm" alt="Sea View" style="max-width: 300px;">
+        <figcaption class="figure-caption text-center">Sea View</figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

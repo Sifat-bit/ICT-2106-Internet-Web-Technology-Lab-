@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion & Advanced Cards with Images</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #f0f4f8;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .flip-card-front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .flip-card-back {
+        transform: rotateY(180deg);
+        font-size: 1rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+      }
+
+      .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-img-top {
+        border: 3px solid #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .badge {
+        margin-top: 5px;
+        font-size: 0.85rem;
+      }
+
+      .accordion-button {
+        background-color: #4a90e2;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #357ab8;
+      }
+
+      .accordion-body {
+        background-color: #f7f9fc;
+      }
+
+      .alert {
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 768px) {
+        .flip-card-inner {
+          height: 180px;
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+          font-size: 1rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-4">
+      <h1 class="text-center mb-5 text-primary">Interactive Content</h1>
+
+      <h2 class="mb-4">City Information Accordion</h2>
+      <div class="accordion mb-5" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Dhaka
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Dhaka is the capital and largest city of Bangladesh. It has a rich
+              cultural heritage and serves as the hub of industrial,
+              educational, and political activities.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Chittagong
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Chittagong is the main seaport and an industrial city of
+              Bangladesh, surrounded by hills and rivers.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mb-4">City Flip Cards</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front text-white p-3 rounded text-center"
+                style="
+                  background-image: url('Images/Dhaka.jpg');
+                  background-size: cover;
+                  height: 200px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <h4 class="bg-dark bg-opacity-50 p-2 rounded">Dhaka</h4>
+              </div>
+              <div class="flip-card-back bg-light p-3 rounded text-center">
+                Capital city with rich history, culture, and industry.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front text-white p-3 rounded text-center"
+                style="
+                  background-image: url('Images/chitta.jpg');
+                  background-size: cover;
+                  height: 200px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <h4 class="bg-dark bg-opacity-50 p-2 rounded">Chittagong</h4>
+              </div>
+              <div class="flip-card-back bg-light p-3 rounded text-center">
+                Port city and industrial hub surrounded by scenic hills.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front text-white p-3 rounded text-center"
+                style="
+                  background-image: url('Images/Sylhet.jpg');
+                  background-size: cover;
+                  height: 200px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <h4 class="bg-dark bg-opacity-50 p-2 rounded">Sylhet</h4>
+              </div>
+              <div class="flip-card-back bg-light p-3 rounded text-center">
+                Famous for tea gardens and natural beauty.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front text-dark p-3 rounded text-center"
+                style="
+                  background-image: url('Images/khulna.jpg');
+                  background-size: cover;
+                  height: 200px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <h4 class="bg-light bg-opacity-75 p-2 rounded">Khulna</h4>
+              </div>
+              <div class="flip-card-back bg-light p-3 rounded text-center">
+                Industrial city near Sundarbans, seafood hub.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mb-4">Profile Cards</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="card text-center shadow-sm">
+            <img
+              src="Images/dp.jpg"
+              class="card-img-top rounded-circle mx-auto mt-3"
+              style="width: 100px; height: 100px"
+              alt="Profile 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">John Doe</h5>
+              <p class="card-text">Software Engineer in Dhaka.</p>
+              <span class="badge bg-primary">Dhaka</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center shadow-sm">
+            <img
+              src="Images/pp.jpg"
+              class="card-img-top rounded-circle mx-auto mt-3"
+              style="width: 100px; height: 100px"
+              alt="Profile 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jane Smith</h5>
+              <p class="card-text">Industrial Manager in Chittagong.</p>
+              <span class="badge bg-success">Chittagong</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mb-4">City Alerts</h2>
+      <div class="alert alert-warning" role="alert">
+        <strong>Dhaka Alert!</strong> Traffic congestion expected due to
+        festival season.
+      </div>
+      <div class="alert alert-success" role="alert">
+        <strong>Chittagong Alert!</strong> New industrial regulations
+        implemented.
+      </div>
+      <div class="alert alert-info" role="alert">
+        <strong>Sylhet Alert!</strong> Tea garden tours now open for tourists.
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

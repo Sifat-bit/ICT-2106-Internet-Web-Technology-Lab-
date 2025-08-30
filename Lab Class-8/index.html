@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional JS Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <script>
+    const internalData = {
+      valueA: 18,
+      valueB: 32
+    };
+
+    function internalSum() {
+      const result = internalData.valueA + internalData.valueB;
+      document.getElementById("internalResult").textContent = `Internal JS Sum: ${result}`;
+    }
+
+    function displayCurrentTime() {
+      const now = new Date();
+      document.getElementById("currentTime").textContent = `Current Time: ${now.toLocaleTimeString()}`;
+    }
+  </script>
+</head>
+<body onload="displayCurrentTime();">
+  <div class="container py-5" style="background-color: #b7d4f0; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+    <h1 class="text-center mb-5 text-primary">Professional JavaScript Demo</h1>
+
+    <section class="mb-5">
+      <h3>Internal JavaScript</h3>
+      <p id="internalResult">Click the button to calculate sum using internal JS data.</p>
+      <button class="btn btn-primary" onclick="internalSum()">Calculate Internal Sum</button>
+    </section>
+
+    <section class="mb-5">
+      <h3>Current Time Display</h3>
+      <p id="currentTime">Loading...</p>
+      <button class="btn btn-secondary" onclick="displayCurrentTime()">Refresh Time</button>
+    </section>
+
+    <section class="mb-5">
+      <h3>External JavaScript</h3>
+      <p id="externalResult">Use external JS variables to calculate sum.</p>
+      <button id="externalBtn" class="btn btn-success">Calculate External Sum</button>
+    </section>
+
+    <section class="mb-5">
+      <h3>Form Input Example</h3>
+      <form id="sumForm">
+        <div class="mb-3">
+          <input type="number" id="num1" class="form-control" placeholder="First Number">
+        </div>
+        <div class="mb-3">
+          <input type="number" id="num2" class="form-control" placeholder="Second Number">
+        </div>
+        <button type="button" id="formBtn" class="btn btn-info">Calculate Form Sum</button>
+      </form>
+      <p id="formResult"></p>
+    </section>
+
+    <section class="mb-5">
+      <h3>User Interaction</h3>
+      <button id="greetBtn" class="btn btn-dark">Enter Name</button>
+      <p id="greetResult"></p>
+    </section>
+  </div>
+
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

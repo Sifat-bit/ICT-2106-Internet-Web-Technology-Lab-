@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f1ed; /* soft warm background */
+    color: #333;
+}
+
+.container {
+    background-color: #fff3e6; /* soft cream instead of pure white */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #6d4c41; /* deep brown for heading */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4e342e;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffe6cc; /* light warm table background */
+    border: 2px solid #ffb366;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ffb366;
+    padding: 12px;
+    text-align: center;
+}
+
+thead {
+    background-color: #ff9966; /* warm orange header */
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #fff0e0;
+}
+
+.test {
+    background-color: #ffe6cc;
+    color: #4e342e;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ffb366;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    flex: 1 1 280px;
+}
+
+#myspan {
+    color: #d84315;
+    font-weight: bold;
+}
+
+iframe {
+    border: 2px solid #ffb366;
+    border-radius: 10px;
+}
+
+form label {
+    font-weight: 600;
+    color: #6d4c41;
+}
+
+form input, form textarea {
+    border-radius: 8px;
+    border: 1px solid #ffb366;
+}
+
+form input[type="submit"] {
+    background-color: #ff9966;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ff884d;
+    cursor: pointer;
+}

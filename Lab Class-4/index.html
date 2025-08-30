@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Info Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1>Computer Information & Samples</h1>
+    </header>
+
+    <!-- Table Section -->
+    <section class="table-section">
+      <h2>Computer Info</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Computer</th>
+            <th>Company</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul>
+                <li><b>Coffee</b></li>
+                <li>Mug</li>
+              </ul>
+            </td>
+            <td>Centro</td>
+            <td>Ernst</td>
+          </tr>
+          <tr>
+            <td>Alfreds</td>
+            <td>Centro</td>
+            <td>Ernst</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Text Section -->
+    <section class="text-section">
+      <div class="text-block">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste non nisi, hic autem minima minus commodi modi repudiandae ratione nemo quos aliquam.
+        </p>
+        <p>
+          Explicabo rerum aut quas, ipsam fugit mollitia sapiente atque quidem? Quasi, praesentium voluptates...
+        </p>
+      </div>
+
+      <div class="text-block">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, <span id="myspan">praesentium</span> voluptates, voluptatibus, ut ducimus inventore quia doloremque repellendus.
+        </p>
+      </div>
+    </section>
+
+    <!-- Embedded Page Section -->
+<section class="iframe-section" style="text-align: center; margin-bottom: 50px;">
+  <h2>Embedded Page</h2>
+  <iframe 
+    src="secondpage.html" 
+    class="embedded-page" 
+    style="width: 100%; max-width: 900px; height: 500px; border: 2px solid #ccc; border-radius: 8px;">
+  </iframe>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section" style="margin-bottom: 50px;">
+  <h2 style="text-align: center; margin-bottom: 20px;">Gallery</h2>
+  <div class="gallery" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <img src="Images/coffee.avif" alt="Coffee" style="width: 250px; height: auto; border-radius: 8px;">
+    <img src="Images/hill.jpg" alt="Scenery" style="width: 250px; height: auto; border-radius: 8px;">
+    <img src="Images/sea.jpg" alt="Scenery 1" style="width: 250px; height: auto; border-radius: 8px;">
+  </div>
+</section>
+
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Submit Your Info</h2>
+      <form action="secondpage.html">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" placeholder="Enter your first name">
+
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" placeholder="Enter your last name">
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+  </div>
+
+</body>
+</html>
