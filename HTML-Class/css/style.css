@@ -1,0 +1,13 @@
+.para{
+    background: rgba(97, 150, 97, 0.5);
+    color:black;
+    margin: 10px;
+    padding: 10px;
+}
+
+#my-div{
+    background-color: burlywood;
+    color:black;
+    margin: 60px;
+    padding: 60px;
+}
